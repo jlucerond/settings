@@ -13,6 +13,8 @@
 		D8B8D7B61F264EFF00FE2E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B8D7B41F264EFF00FE2E2C /* LaunchScreen.storyboard */; };
 		D8B8D7C01F2660FE00FE2E2C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8D7BF1F2660FE00FE2E2C /* Setting.swift */; };
 		D8B8D7C21F26627600FE2E2C /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8D7C11F26627600FE2E2C /* SettingsController.swift */; };
+		D8B8D7C51F2668B500FE2E2C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8D7C41F2668B500FE2E2C /* SettingsViewController.swift */; };
+		D8B8D7C71F266BF100FE2E2C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8D7C61F266BF100FE2E2C /* SettingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D8B8D7B71F264EFF00FE2E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8B8D7BF1F2660FE00FE2E2C /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		D8B8D7C11F26627600FE2E2C /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		D8B8D7C41F2668B500FE2E2C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D8B8D7C61F266BF100FE2E2C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				D8B8D7AF1F264EFF00FE2E2C /* Main.storyboard */,
+				D8B8D7C41F2668B500FE2E2C /* SettingsViewController.swift */,
+				D8B8D7C61F266BF100FE2E2C /* SettingTableViewCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -165,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B8D7C21F26627600FE2E2C /* SettingsController.swift in Sources */,
+				D8B8D7C71F266BF100FE2E2C /* SettingTableViewCell.swift in Sources */,
 				D8B8D7C01F2660FE00FE2E2C /* Setting.swift in Sources */,
 				D8B8D7AC1F264EFF00FE2E2C /* AppDelegate.swift in Sources */,
+				D8B8D7C51F2668B500FE2E2C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

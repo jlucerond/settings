@@ -11,7 +11,11 @@ import Foundation
 class SettingsController {
     static let shared = SettingsController()
     
-    let mySetting: [Setting]
+    private let mySettings: [Setting]
+    
+    var numberOfSettings: Int {
+        return mySettings.count
+    }
     
     // MARK: - Initializer
     
@@ -20,6 +24,10 @@ class SettingsController {
         let apps = Setting(name: "Apps", image: #imageLiteral(resourceName: "app"), isSet: false)
         let books = Setting(name: "Books", image: #imageLiteral(resourceName: "ibooks"), isSet: false)
         let updates = Setting(name: "Updates", image: #imageLiteral(resourceName: "app"), isSet: false)
-        mySetting = [music, apps, books, updates]
+        mySettings = [music, apps, books, updates]
+    }
+    
+    func setting(at indexPath: IndexPath) -> Setting {
+        return mySettings[indexPath.row]
     }
 }
