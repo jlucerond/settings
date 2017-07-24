@@ -12,7 +12,7 @@ class Setting {
     // MARK: - Properties
     let name: String
     let image: UIImage
-    let isSet: Bool
+    var isSet: Bool
     
     // MARK: - Initializer
     init(name: String, image: UIImage, isSet: Bool) {

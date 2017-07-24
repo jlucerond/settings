@@ -18,12 +18,30 @@ class SettingsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create the custom cell here
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as? SettingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as? SettingTableViewCell
         let setting = SettingsController.shared.setting(at: indexPath)
         
         cell?.updateViews(with: setting)
+        cell?.delegate = self
         
         return cell ?? UITableViewCell()
     }
 
+}
+
+// MARK: - SettingTableViewCellDelegate Protocol
+extension SettingsViewController: SettingTableViewCellDelegate {
+    func switchValueChangedOn(cell: SettingTableViewCell, to bool: Bool) {
+        guard let cellIndexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        
+        let setting = SettingsController.shared.setting(at: cellIndexPath)
+        
+        tableView.beginUpdates()
+        setting.isSet = bool
+        tableView.reloadRows(at: [cellIndexPath], with: .automatic)
+        tableView.endUpdates()
+    }
+    
 }

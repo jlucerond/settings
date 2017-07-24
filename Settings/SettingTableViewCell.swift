@@ -8,8 +8,14 @@
 
 import UIKit
 
-class SettingTableViewCell: UITableViewCell {
+// MARK: - SettingTableViewCellDelegate Protocol
+protocol SettingTableViewCellDelegate: class {
+    func switchValueChangedOn(cell: SettingTableViewCell, to bool: Bool)
+}
 
+// MARK: - SettingTableViewCell Class
+class SettingTableViewCell: UITableViewCell {
+    
     // MARK: - IBOutlets
     
     // Image
@@ -20,6 +26,9 @@ class SettingTableViewCell: UITableViewCell {
     
     // Switch
     @IBOutlet weak var settingSwitch: UISwitch!
+    
+    // MARK: - Variables
+    weak var delegate: SettingTableViewCellDelegate?
     
     // MARK: - Lifecycle
     func updateViews(with setting: Setting?) {
@@ -33,5 +42,10 @@ class SettingTableViewCell: UITableViewCell {
         
         self.backgroundColor = setting.isSet ? .yellow : .white
     }
-
+    
+    // MARK: - IBActions
+    @IBAction func switchValueChanged() {
+        delegate?.switchValueChangedOn(cell: self, to: settingSwitch.isOn)
+    }
+    
 }
